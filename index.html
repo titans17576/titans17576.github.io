@@ -1,17 +1,180 @@
 <!DOCTYPE html>
 <html>
-	<head>
-        <title>IMSA Titans 17576</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    </head>
-    <body>
-        <div class="jumbotron text-center">
-            <h1>Titans 17576</h1>
-            <p>We're an FTC team based in Aurora, IL at the Illinois Mathematics and Science Academy</p>
+
+<head>
+    <title>IMSA Titans 17576</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            padding-top: 70px;
+        }
+
+        /* Force carousel to a consistent height */
+        #robotCarousel .item {
+            height: 400px;
+            /* adjust height as desired */
+        }
+
+        #robotCarousel img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            /* crop images while filling area */
+            object-position: center;
+        }
+
+        .footer {
+            padding: 30px;
+            background: #f2f2f2;
+            margin-top: 50px;
+        }
+
+        .sponsor-img {
+            max-height: 140px;
+            margin-bottom: 15px;
+        }
+
+        /* Make the brand area use flexbox for perfect vertical alignment */
+.nav-brand-with-logo {
+    display: flex !important;
+    align-items: center;      /* vertical centering */
+    padding: 5px 15px;        /* keeps navbar height normal */
+}
+
+.nav-logo {
+    height: 40px;             /* resized from 200x200 */
+    width: auto;
+}
+
+.nav-brand-text {
+    font-size: 18px;
+    margin-left: 8px;         /* spacing between logo + text */
+    line-height: 1;           /* prevents that droopy look */
+}
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand nav-brand-with-logo" href="#">
+                    <img src="images/logo.png" alt="Titan Logo" class="nav-logo">
+                    <span class="nav-brand-text">Titans 17576</span>
+                </a>
+            </div>
+
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#robots">Robots</a></li>
+                    <li><a href="#sponsors">Sponsors</a></li>
+                </ul>
+            </div>
         </div>
-    </body>
+    </nav>
+
+    <!-- JUMBOTRON -->
+    <div class="jumbotron text-center">
+        <h1>Titans 17576</h1>
+        <p>We're an FTC team based in Aurora, IL at the Illinois Mathematics and Science Academy</p>
+    </div>
+
+    <!-- ROBOT CAROUSEL -->
+    <div class="container" id="robots">
+        <h2 class="text-center">Robots</h2>
+        <p class="text-center">blah blajs haslasf</p>
+
+        <div id="robotCarousel" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#robotCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#robotCarousel" data-slide-to="1"></li>
+                <li data-target="#robotCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="images/test1.png" alt="Robot 1" class="img-responsive center-block">
+                    <div class="carousel-caption">
+                        <h3>Random robot subtitle!!! 1</h3>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="images/test2.png" alt="Robot 2" class="img-responsive center-block">
+                    <div class="carousel-caption">
+                        <h3>Random robot subtitle!!! 2</h3>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="images/test3.png" alt="Robot 3" class="img-responsive center-block">
+                    <div class="carousel-caption">
+                        <h3>Random robot subtitle!!! 3</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#robotCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#robotCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- SPONSORS -->
+    <div class="container" id="sponsors">
+        <h2 class="text-center">Our Sponsors</h2>
+        <p class="text-center">Thank you to the organizations and individuals who make our season possible!</p>
+
+        <div class="row text-center">
+            <div class="col-sm-4">
+                <img src="images/test1.png" class="img-responsive center-block sponsor-img" alt="Sponsor 1">
+                <h4>Sponsor Name 1</h4>
+            </div>
+
+            <div class="col-sm-4">
+                <img src="images/test2.png" class="img-responsive center-block sponsor-img" alt="Sponsor 2">
+                <h4>Sponsor Name 2</h4>
+            </div>
+
+            <div class="col-sm-4">
+                <img src="images/test3.png" class="img-responsive center-block sponsor-img" alt="Sponsor 3">
+                <h4>Sponsor Name 3</h4>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- FOOTER -->
+    <div class="footer text-center">
+        <p><strong>Titans 17576</strong> — Illinois Mathematics and Science Academy</p>
+        <p>
+            <a href="#" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-envelope"></span> Email</a>
+            <a href="#" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-bullhorn"></span> Facebook</a>
+        </p>
+    </div>
+
+</body>
+
 </html>
